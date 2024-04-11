@@ -40,7 +40,7 @@ mod.HSD <- TukeyHSD(dispersion) # no da significativa puedo seguir
 plot(mod.HSD)
 
 #La matriz.de.distancias es la que obtienes con vegdist
-#El grupo en tu caso sería la condic de uso (Lu)
+#El grupo en tu caso serÃ­a la condic de uso (Lu)
 data.ano.v <- anosim(veg.dist, LU)
 summary(data.ano.v)
 
@@ -72,7 +72,7 @@ veg.adonis
 
 ##############################################################################
 #Gr?ficos de ordenaci?n: Non-metric multidimensional scaling NMDS
-#Gr�ficos de ordenaci�n: Non-metric multidimensional scaling NMDS
+#Gráficos de ordenación: Non-metric multidimensional scaling NMDS
 
 
 library(ggplot2)
@@ -103,9 +103,11 @@ p1 <-ggplot(veg, aes(NMDS1, NMDS2))+
 
 p1
 
+# We can see that the 3 land use types shere a great part of their plants species, but the sites with active livestock production systems presente more heterogenity. 
+# Maybe the land use management is introducing heterogenity and increasing diversity but disruting the state of plant community. 
 
 #el stress indice permite saber si las diferencias y similitudes de los datos
-#�estan bien expresadas en el graficos. En este caso si. hay que fijrse q tan dispersos 
+#ºestan bien expresadas en el graficos. En este caso si. hay que fijrse q tan dispersos 
 #estan los puntos de la linea
 
 stressplot(ord2)
