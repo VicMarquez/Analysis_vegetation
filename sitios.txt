@@ -1,0 +1,17 @@
+sitio	LU
+gan1.1	C
+gan1.2	C
+gan2.1	C
+gan2.2	C
+pin1.1	RWC
+pin1.2	RWC
+pin2.1	RWC
+pin2.2	RWC
+pin3.1	RWC
+pin3.2	RWC
+chan1.1	WV
+chan1.2	WV
+chan2.1	WV
+chan2.2	WV
+chan3.1	WV
+chan3.2	WV
