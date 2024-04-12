@@ -5,10 +5,7 @@ library(permute)
 library (ggplot2)
 ###An?lisis de similitud (COMPOSICI?N)
 #Archivo: "AnoSim2.txt" ###Deben estar las Spp como columnas###
-
-####DIVIDO LA COMPOSICION POR ESTRATOS ###
-
-#########ESTRA ARBOREO##########
+# All species (herb, shrub and tree) 
 
 veg<- read.table(file.choose(), header = TRUE)
 head(veg) #base de datos veg
@@ -71,11 +68,7 @@ veg.adonis
 ---
 
 ##############################################################################
-#Gr?ficos de ordenaci?n: Non-metric multidimensional scaling NMDS
-#Gráficos de ordenación: Non-metric multidimensional scaling NMDS
-
-
-library(ggplot2)
+# Non-metric multidimensional scaling NMDS
 ord1 <- metaMDS(veg, distance = "bray")
 plot(ord1, type = "t")
 
@@ -129,20 +122,15 @@ metaMDS(
 #################################
 require(graphics)
 install.packages("ggdendro")
-library("ggplot2")
 library(ggdendro)
 head(data)
-
 
 a <- hclust(veg.dist, "ave") #########mepa q es este 
 a <- hclust(dist(veg), "ave")
 
-
 a <- hclust(veg.dist, "ave")
 plot(a)
-plot(a, hang = -1) # aca se ve que lo sitios estan re mezclados 
-# la condicion no explica ni la variable del suelo ni la composicion de la vegetacion 
-
+plot(a, hang = -1) # 
 ggdendrogram(a)
 
 # Build dendrogram object from hclust results
